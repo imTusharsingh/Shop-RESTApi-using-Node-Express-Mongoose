@@ -33,6 +33,8 @@ app.use((req, res, next) => {
     next();
 })
 
+require('./middleware/mailer')
+
 //Routes
 app.use('/', userRoute)
 app.use('/products', productRoute);
